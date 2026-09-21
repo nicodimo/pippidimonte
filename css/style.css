@@ -384,3 +384,34 @@ p { color: #d9d3c8; }
   .nav-links a { display: block; width: 100%; padding: .85rem 0; border-bottom: 1px solid var(--line); }
   .hero { min-height: 78vh; }
 }
+
+/* ---------- Chi sono / essay ---------- */
+.essay { max-width: 64ch; }
+.essay > p { margin: 0 0 1.3rem; }
+.essay .lead { margin-bottom: 1.7rem; }
+.essay .pull {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.22;
+  color: var(--wood-lt);
+  margin: 2.3rem 0;
+}
+.essay strong { color: var(--cream); font-weight: 600; }
+.bio-portrait .frame img { height: auto; }
+
+/* Copertine discografia: mostra un segnaposto finché l'immagine reale non è caricata */
+.release-cover { background: var(--night-2) url('../img/dischi/_placeholder.svg') center / 60% no-repeat; }
+
+/* ---------- Selettore lingua (IT | EN) ---------- */
+.lang-switch { display: inline-flex; align-items: center; gap: .5rem; }
+.nav-links .lang-switch { margin-left: .6rem; padding-left: 1rem; border-left: 1px solid var(--line); }
+.lang-switch a, .lang-switch .lang-current { font-size: .82rem; letter-spacing: .08em; }
+.lang-switch a { color: var(--muted); text-decoration: none; padding: 0; }
+.lang-switch a:hover { color: var(--wood-lt); }
+.lang-switch a::after { content: none; }
+.lang-switch .lang-current { color: var(--cream); }
+@media (max-width: 720px) {
+  .nav-links .lang-switch { border-left: 0; margin-left: 0; padding: .85rem 0; width: 100%; }
+  .nav-links .lang-switch a { display: inline; width: auto; padding: 0; border: 0; }
+}
